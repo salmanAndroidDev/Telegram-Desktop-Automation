@@ -9,7 +9,7 @@ like this one below, but it takes time i prefere to hard code x and y of positio
 ...
 menu_loc = pag.locateOnScreen('./setting.png')
 """
-waint = 0.4
+waint = 0.2
 def delete_user():
     menuXY = (95, 82)
     contactsXY = (168, 312)
@@ -23,6 +23,7 @@ def delete_user():
     pag.click(contactsXY)
     time.sleep(waint)
     pag.press('down')
+    pag.press('down')
     time.sleep(waint)
     pag.press('enter')
     time.sleep(waint)
@@ -34,9 +35,10 @@ def delete_user():
             pag.click(focus_profle_XY)            
             pag.press('down')
             pag.press('down')
+            time.sleep(waint)
             deleteXY = pag.locateOnScreen('delete.png')
             
-            if deleteXY == None:
+            if deleteXY != None:
                 break
 
     pag.click(deleteXY)

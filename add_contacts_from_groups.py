@@ -11,7 +11,7 @@ def add_contacts():
     pag.moveRel(0,-30)
     pag.click()
 
-    for j in range(200):  
+    for j in range(1430):  
         for i in range(3):
             pag.press('down')
             # time.sleep(2)
